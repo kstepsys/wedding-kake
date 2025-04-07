@@ -20,10 +20,8 @@
 
           <div id="navbar-collapse" class="navbar-collapse collapse text-center justify-content-center">
             <ul class="nav navbar-nav">
-              <li class="nav-item"><a class="nav-link scrollto" href="#wedding">The Wedding</a></li>
-              <li class="nav-item"><a class="nav-link scrollto" href="#story">Our Story</a></li>
+              <li class="nav-item"><a class="nav-link scrollto" href="#wedding">Vestuvių šventė</a></li>
               <li class="nav-item"><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link scrollto" href="#gift">Registries</a></li>
               <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal"
                   data-bs-target="#rsvp-modal">RSVP</a></li>
             </ul><!--//nav-->
@@ -37,27 +35,48 @@
         <div class="row">
           <div class="hero-box col-lg-5 col-md-7 col-12">
             <h1 class="headline script">
-              <span class="names display-block">Amy & Nick</span>
+              <span class="names display-block">Kamilė ir Kęstutis</span>
               <span class="statement display-block">
-                <span class="swirl-left"></span><span class="statement-text">are getting married</span><span
+                <span class="swirl-left"></span><span class="statement-text">kviečia jus į savo vestuves</span><span
                   class="swirl-right"></span>
               </span><!--//statement-->
             </h1><!--/headline-->
             <div class="date">
-              <span class="date-text">July 16, 2026</span>
+              <span class="date-text">Rugsėjo 19, 2025</span>
             </div><!--//date-->
-            <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">RSVP
-              Now</a>
+            <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">RSVP dabar!
+              </a>
           </div><!--//hero-box-->
         </div>
       </div><!--//container-->
       <div class="curve-holder"></div>
     </div><!--//hero-section-->
 
+    <div class="mobile-hero-img d-md-none">
+  <img src="assets/images/IMG_2491asd.jpg" alt="Wedding banner" class="img-fluid rounded shadow">
+</div>
+
+    <div class="mobile-hero-box d-md-none">
+  <h1 class="headline script">
+    <span class="names display-block">Kamilė ir Kęstutis</span>
+    <span class="statement display-block">
+      <span class="swirl-left"></span>
+      <span class="statement-text">kviečia jus į savo vestuves</span>
+      <span class="swirl-right"></span>
+    </span>
+  </h1>
+  <div class="date">
+    <span class="date-text">Rugsėjo 19, 2025</span>
+  </div>
+  <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">
+    RSVP dabar!
+  </a>
+</div>
+
     <!-- ******Wedding Section****** -->
     <section id="wedding" class="wedding-section section">
       <div class="container text-center">
-        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">The Wedding</span><span
+        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">Vestuvių šventė</span><span
             class="title-deco-right"></span></h3>
         <div id="countdown-box" class="countdown-box">
 
@@ -65,7 +84,7 @@
         <div class="row cols-wrapper">
           <div class="ceremony-col col-12 col-md-6">
             <div class="col-inner px-4 px-md-5">
-              <h4 class="subtitle">Ceremony</h4>
+              <h4 class="subtitle">Ceremonija</h4>
               <p class="intro">We are getting married at St Paul’s Church. Lorem ipsum dolor sit amet, consectetuer
                 adipiscing elit. Aenean commodo ligula eget dolor aenean massa. </p>
               <ul class="meta-list list-unstyled text-start center-block">
@@ -83,7 +102,7 @@
           </div><!--//ceremony-col-->
           <div class="reception-col col-12 col-md-6">
             <div class="col-inner px-4 px-md-5">
-              <h4 class="subtitle">Reception</h4>
+              <h4 class="subtitle">Šventės dalis</h4>
               <p class="intro">The party will take place after the ceremony at the Manor House.
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aenean massa.
               </p>
@@ -103,13 +122,12 @@
         </div><!--//row-->
 
         <div class="action-wrapper">
-          <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">RSVP Now</a>
+          <a class="btn btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">RSVP Dabar!</a>
         </div><!--//action-wrapper-->
 
       </div><!--//container-->
       <div id="map" class="map-container">
-        <iframe class="map-iframe" src="https://www.google.com/maps/d/u/2/embed?mid=1-qDRFJocmqPd6r6HEErS2sWv7VYeNiCc"
-          width="640" height="480"></iframe>
+          <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5538657031675!2d25.309692976796363!3d54.699878072595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9698b234654f%3A0xa0b3079079931a62!2sMIESTO%20LABORATORIJA%20-%20bendruomen%C4%97s%20edukacijos%20centras!5e0!3m2!1slt!2slt!4v1744027340050!5m2!1slt!2slt" width="640" height="480" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div><!--//map-container-->
     </section><!--//wedding-section-->
 
@@ -118,10 +136,9 @@
     <!-- ******Gallery Section****** -->
     <section id="gallery" class="gallery-section section">
       <div class="container text-center">
-        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">Gallery</span><span
+        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">Galerija</span><span
             class="title-deco-right"></span></h3>
-        <div class="intro">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br> Aenean commodo ligula eget
-          dolor. </div>
+        <div class="intro">Hehe </div>
         <div class="gallery-container">
 
           <div id="photos-wrapper" class="photos-wrapper">
@@ -170,23 +187,15 @@
     <!-- ******Gift Section****** -->
     <section id="gift" class="gift-section section">
       <div class="container text-center">
-        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text"><span
-              class="d-none d-lg-inline">Gift</span> Registries</span><span class="title-deco-right"></span></h3>
         <div class="message-container">
           <div class="message-inner mx-auto">
-            <div class="intro">The most important gift to us is to have you
-              share our day. However if you do wish to buy us a gift you can check out the registry lists below. Lorem
-              ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
-            <div class="thank-you script">Thank you so much! :)</div>
-            <div class="signature script">Amy & Nick</div>
-            <div class="couple-profile"></div>
+            <div class="intro">Mums didžiausia dovana bus, jeigu JŪS atvyksite į mūsų šventę</div>
+            <div class="thank-you script">Ačiū! :)</div>
+            <div class="signature script">Kamilly ir Kęstutis</div>
           </div><!--//message-inner-->
         </div><!--//message-container-->
         <div class="registries-container">
           <ul class="list-inline brand-list">
-            <li class="list-inline-item"><a href="#"><img src="assets/images/brand-1.svg" alt="" /></a></li>
-            <li class="list-inline-item"><a href="#"><img src="assets/images/brand-2.svg" alt="" /></a></li>
-            <li class="list-inline-item"><a href="#"><img src="assets/images/brand-3.svg" alt="" /></a></li>
           </ul>
         </div>
       </div><!--//container-->
@@ -197,10 +206,6 @@
     <footer class="footer">
       <div class="footer-content text-center">
         <div class="container">
-          <div class="copyright">Template Copyright @ <a href="http://themes.3rdwavemedia.com/" target="_blank">3rd Wave
-              Media</a></div>
-          <div class="credit">Photos by <a href="https://www.flickr.com/photos/ryan_polei/" target="_blank">Ryan
-              Polei</a></div>
         </div><!--//container-->
       </div><!--//footer-content-->
     </footer><!--//footer-->

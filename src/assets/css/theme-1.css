@@ -310,13 +310,12 @@ label {
 
 /* ======= Hero Section ======= */
 .hero-section {
-  margin-top: 55px;
-  background: #000 url("../images/IMG_0730.jpg") no-repeat center top;
-  background-size: contain;
-  height: 760px;
+  background: #000 url("../images/IMG_2491asd.jpg") no-repeat center center;
+  background-size: cover; /* Fill full screen width */
+  background-repeat: no-repeat;
+  height: 100vh; /* Full screen height */
+  max-height: 760px; /* Optional: cap height */
   position: relative;
-  background-position: center top;
-
 }
 
 .curve-holder {
@@ -1197,4 +1196,160 @@ body {
 .config-panel .close .svg-inline--fa {
   color: #fff;
   font-size: 16px;
+}
+
+.hero-section {
+  background: #000 url("../images/IMG_2491asd.jpg") no-repeat 60% center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .container {
+  display: flex;
+  justify-content: flex-start; /* Push left */
+}
+
+.hero-box {
+  margin-left: 2rem; /* Shift left */
+  background-color: rgba(0, 0, 0, 0.4); /* optional: darken text bg */
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    display: block; /* override flex */
+    height: auto !important; /* let it fit content */
+    padding: 0;
+  }
+
+  .hero-box {
+    margin-left: 0 !important;
+    border-radius: 0;
+    height: auto !important;
+    padding: 60px 20px 40px; /* tweak padding for balance */
+  }
+
+  .headline .names {
+    font-size: 48px;
+  }
+
+  .headline .statement-text {
+    font-size: 24px;
+  }
+
+  .hero-box .date {
+    font-size: 18px;
+    height: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .btn-rsvp {
+    font-size: 16px;
+    padding: 12px 30px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    display: block;
+    height: 300px; /* fixed height or adjust as needed */
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+  }
+
+  /* Hide the hero-box's absolute positioning on mobile */
+  .hero-box {
+    position: static !important;
+    margin: 0 auto;
+    background-color: #000000cc; /* dark shadow bg */
+    color: white;
+    border-radius: 16px;
+    padding: 20px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transform: translateY(0); /* reset transforms */
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .hero-section .container {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-section {
+    background: #000 url("../images/IMG_2491asd.jpg") no-repeat center center;
+    background-size: cover;
+    height: 300px; /* adjust as needed */
+    position: relative;
+  }
+
+  .hero-section .container {
+    display: none; /* hide the .hero-box from inside hero-section */
+  }
+
+  /* Move hero-box visually below .hero-section */
+  .mobile-hero-box {
+    display: block;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 30px 20px;
+    margin-top: -20px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-hero-box .names {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+
+  .mobile-hero-box .statement-text {
+    font-size: 20px;
+  }
+
+  .mobile-hero-box .btn-rsvp {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-hero-box {
+    margin-bottom: 24px;
+  }
+
+  .mobile-hero-img {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .mobile-hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
+  /* Optional: spacing above #wedding */
+  #wedding {
+    margin-top: 24px;
+  }
 }
