@@ -1,23 +1,41 @@
+# macOS
 .DS_Store
-node_modules
-/dist
 
-
-# local env files
-.env.local
-.env.*.local
-
-# Log files
+# Node
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Editor directories and files
-.idea
-.vscode
+# Firebase
+/firebase-debug.log
+.firebaserc
+.firebase/
+
+# Functions (Firebase backend)
+functions/node_modules/
+functions/lib/
+functions/.env
+functions/.env.*
+
+# Vue build output
+/dist
+/.output
+
+# Local env files
+.env.local
+.env.*.local
+.env
+
+# IDE/editor files
+.idea/
+.vscode/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Optional: OS junk
+Thumbs.db
