@@ -45,7 +45,7 @@
               <span class="date-text">Rugsėjo 19, 2025</span>
             </div><!--//date-->
             <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">RSVP dabar!
-              </a>
+            </a>
           </div><!--//hero-box-->
         </div>
       </div><!--//container-->
@@ -53,34 +53,51 @@
     </div><!--//hero-section-->
 
     <div class="mobile-hero-img d-md-none">
-  <img src="assets/images/IMG_2491asd.jpg" alt="Wedding banner" class="img-fluid rounded shadow">
-</div>
+      <img src="assets/images/IMG_2491asd.jpg" alt="Wedding banner" class="img-fluid rounded shadow">
+    </div>
 
     <div class="mobile-hero-box d-md-none">
-  <h1 class="headline script">
-    <span class="names display-block">Kamilė ir Kęstutis</span>
-    <span class="statement display-block">
-      <span class="swirl-left"></span>
-      <span class="statement-text">kviečia jus į savo vestuves</span>
-      <span class="swirl-right"></span>
-    </span>
-  </h1>
-  <div class="date">
-    <span class="date-text">Rugsėjo 19, 2025</span>
-  </div>
-  <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">
-    RSVP dabar!
-  </a>
-</div>
+      <h1 class="headline script">
+        <span class="names display-block">Kamilė ir Kęstutis</span>
+        <span class="statement display-block">
+          <span class="swirl-left"></span>
+          <span class="statement-text">kviečia jus į savo vestuves</span>
+          <span class="swirl-right"></span>
+        </span>
+      </h1>
+      <div class="date">
+        <span class="date-text">Rugsėjo 19, 2025</span>
+      </div>
+      <a class="btn btn-primary btn-rsvp" href="#" data-bs-toggle="modal" data-bs-target="#rsvp-modal">
+        RSVP dabar!
+      </a>
+    </div>
 
     <!-- ******Wedding Section****** -->
     <section id="wedding" class="wedding-section section">
       <div class="container text-center">
-        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">Vestuvių šventė</span><span
-            class="title-deco-right"></span></h3>
-        <div id="countdown-box" class="countdown-box">
+        <h3 class="title script"><span class="title-deco-left"></span><span class="title-text">Vestuvių
+            šventė</span><span class="title-deco-right"></span></h3>
 
-        </div><!--//countdown-box-->
+        <div id="countdown-box" class="countdown-box">
+          <span>
+            <span class="number">{{ countdown.days }}</span>
+            <span class="unit">Dienos</span>
+          </span>
+          <span>
+            <span class="number">{{ countdown.hours }}</span>
+            <span class="unit">Valandos</span>
+          </span>
+          <span>
+            <span class="number">{{ countdown.minutes }}</span>
+            <span class="unit">Minutės</span>
+          </span>
+          <span>
+            <span class="number">{{ countdown.seconds }}</span>
+            <span class="unit">Sekundės</span>
+          </span>
+        </div>
+
         <div class="row cols-wrapper">
           <div class="ceremony-col col-12 col-md-6">
             <div class="col-inner px-4 px-md-5">
@@ -127,7 +144,10 @@
 
       </div><!--//container-->
       <div id="map" class="map-container">
-          <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5538657031675!2d25.309692976796363!3d54.699878072595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9698b234654f%3A0xa0b3079079931a62!2sMIESTO%20LABORATORIJA%20-%20bendruomen%C4%97s%20edukacijos%20centras!5e0!3m2!1slt!2slt!4v1744027340050!5m2!1slt!2slt" width="640" height="480" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2305.5538657031675!2d25.309692976796363!3d54.699878072595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd9698b234654f%3A0xa0b3079079931a62!2sMIESTO%20LABORATORIJA%20-%20bendruomen%C4%97s%20edukacijos%20centras!5e0!3m2!1slt!2slt!4v1744027340050!5m2!1slt!2slt"
+          width="640" height="480" style="border:0;" allowfullscreen="true" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div><!--//map-container-->
     </section><!--//wedding-section-->
 
@@ -439,3 +459,84 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      countdown: {
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00'
+      },
+      countdownInterval: null
+    };
+  },
+  mounted() {
+    this.startCountdown('2025-09-19T13:00:00Z');
+  },
+  beforeUnmount() {
+    clearInterval(this.countdownInterval);
+  },
+  methods: {
+    startCountdown(targetDate) {
+      const end = new Date(targetDate).getTime();
+
+      this.countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = end - now;
+
+        if (distance < 0) {
+          clearInterval(this.countdownInterval);
+          this.countdown = {
+            days: '00',
+            hours: '00',
+            minutes: '00',
+            seconds: '00'
+          };
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        this.countdown = {
+          days: String(days).padStart(2, '0'),
+          hours: String(hours).padStart(2, '0'),
+          minutes: String(minutes).padStart(2, '0'),
+          seconds: String(seconds).padStart(2, '0')
+        };
+      }, 1000);
+    }
+  }
+};
+</script>
+
+<style>
+.countdown-box {
+  margin-bottom: 60px;
+  font-size: 18px;
+}
+
+.countdown-box span {
+  display: inline-block;
+  margin-left: 5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+.countdown-box span.number {
+  font-size: 36px;
+  display: block;
+  font-weight: bold;
+  color: #ef8a6e;
+}
+
+.countdown-box span.unit {
+  font-size: 16px;
+  color: #786b67;
+}
+</style>
