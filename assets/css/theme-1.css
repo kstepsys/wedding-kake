@@ -310,7 +310,7 @@ label {
 
 /* ======= Hero Section ======= */
 .hero-section {
-  background: #000 url("../images/harry_potter.jpg") no-repeat center center;
+  background: #000 url("../images/nida.jpg") no-repeat center center;
   background-size: cover; /* Fill full screen width */
   background-repeat: no-repeat;
   height: 100vh; /* Full screen height */
@@ -1199,24 +1199,43 @@ body {
 }
 
 .hero-section {
-  background: #000 url("../images/harry_potter.jpg") no-repeat 60% center;
-  background-size: cover;
+  background: #000 url("../images/nida.jpg") no-repeat center center;
+  background-size: cover; /* Show full image */
   height: 100vh;
+  max-height: 100vh;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* subtle dark overlay */
+  z-index: 1;
 }
 
 .hero-section .container {
   display: flex;
-  justify-content: flex-start; /* Push left */
+  justify-content: flex-start;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-box {
-  margin-left: 2rem; /* Shift left */
-  background-color: rgba(0, 0, 0, 0.4); /* optional: darken text bg */
+  margin-left: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 2rem;
   border-radius: 1rem;
+  color: white;
+  z-index: 2;
 }
 
 @media (max-width: 767px) {
@@ -1287,15 +1306,9 @@ body {
   }
 }
 
-.phone-picture {
-  background: #000 url("../images/harry_potter.jpg") center center;
-  /* width: 100%; */
-  height: 300px;
-}
-
 @media (max-width: 767px) {
   .hero-section {
-    background: #000 url("../images/harry_potter.jpg") no-repeat center center;
+    background: #000 url("../images/nida.jpg") no-repeat center center;
     background-size: cover;
     height: 300px; /* adjust as needed */
     position: relative;
@@ -1311,7 +1324,7 @@ body {
     background: rgba(0, 0, 0, 0.6);
     color: white;
     padding: 30px 20px;
-    margin-top: -20px;
+    margin-top: 20px;
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -1338,24 +1351,31 @@ body {
 }
 
 @media (max-width: 767px) {
-  .mobile-hero-box {
-    margin-bottom: 24px;
-  }
-
   .mobile-hero-img {
-    margin-bottom: 32px;
-    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 
   .mobile-hero-img img {
     width: 100%;
     height: auto;
-    border-radius: 0px !important;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    object-fit: cover;
+    border-radius: 0;
   }
 
-  /* Optional: spacing above #wedding */
-  #wedding {
-    margin-top: 24px;
-  }
+    /* Optional: spacing above #wedding */
+    #wedding {
+      margin-top: 300px;
+    }
+}
+
+.phone-picture {
+  background: #000 url("../images/nida.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 300px; /* Adjust as needed */
 }
