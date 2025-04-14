@@ -1244,7 +1244,7 @@ body {
 
 .hero-section .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   position: relative;
   z-index: 2;
 }
