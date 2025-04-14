@@ -1218,7 +1218,7 @@ body {
 
 */
 .hero-section {
-  background: #000 url("../images/jurmala.jpg") no-repeat center center;
+  background: #000 url("../images/karkle.jpg") no-repeat center center;
   background-size: contain; /* Better for portrait images */
   background-position: center center;
   background-repeat: no-repeat;
@@ -1261,16 +1261,17 @@ body {
   backdrop-filter: blur(3px);
 }
 
-/* Mobile version adjusted for portrait image full height */
+/* Mobile version adjusted for portrait image and better layout */
 @media (max-width: 767px) {
   .hero-section {
     display: block;
     width: 100%;
-    height: auto;
-    background: #000 url("../images/jurmala.jpg") no-repeat center center;
+    background: #000 url("../images/karkle.jpg") no-repeat center top;
     background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 60px;
     position: relative;
-    aspect-ratio: 3 / 4;
   }
 
   .hero-section .container {
@@ -1309,7 +1310,6 @@ body {
 
   .mobile-hero-img {
     width: 100%;
-    height: auto;
     overflow: hidden;
     display: block;
     margin: 0;
@@ -1319,12 +1319,15 @@ body {
   .mobile-hero-img img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 0;
+    max-height: 80vh;
+    display: block;
+    margin: 0 auto;
   }
 
   #wedding {
-    margin-top: 300px;
+    margin-top: 60px;
   }
 }
 
