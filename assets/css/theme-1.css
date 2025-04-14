@@ -310,7 +310,7 @@ label {
 
 /* ======= Hero Section ======= */
 .hero-section {
-  background: #000 url("../images/madeira.jpg") no-repeat center center;
+  background: #000 url("../images/jurmala.jpg") no-repeat center center;
   background-size: cover; /* Fill full screen width */
   background-repeat: no-repeat;
   height: 100vh; /* Full screen height */
@@ -1217,10 +1217,11 @@ body {
 
 
 */
-
 .hero-section {
-  background: #000 url("../images/madeira.jpg") no-repeat center center;
-  background-size: cover; /* Show full image */
+  background: #000 url("../images/jurmala.jpg") no-repeat center center;
+  background-size: contain; /* Better for portrait images */
+  background-position: center center;
+  background-repeat: no-repeat;
   height: 100vh;
   max-height: 100vh;
   position: relative;
@@ -1244,7 +1245,7 @@ body {
 
 .hero-section .container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
 }
@@ -1256,89 +1257,26 @@ body {
   border-radius: 1rem;
   color: white;
   z-index: 2;
+  max-width: 480px;
+  backdrop-filter: blur(3px);
 }
 
+/* Mobile version adjusted for portrait image full height */
 @media (max-width: 767px) {
   .hero-section {
-    display: block; /* override flex */
-    height: auto !important; /* let it fit content */
-    padding: 0;
-  }
-
-  .hero-box {
-    margin-left: 0 !important;
-    border-radius: 0;
-    height: auto !important;
-    padding: 60px 20px 40px; /* tweak padding for balance */
-  }
-
-  .headline .names {
-    font-size: 48px;
-  }
-
-  .headline .statement-text {
-    font-size: 24px;
-  }
-
-  .hero-box .date {
-    font-size: 18px;
+    display: block;
+    width: 100%;
     height: auto;
+    background: #000 url("../images/jurmala.jpg") no-repeat center center;
     background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 10px;
-    margin-bottom: 20px;
-  }
-
-  .btn-rsvp {
-    font-size: 16px;
-    padding: 12px 30px;
-    display: inline-block;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-section {
-    display: block;
-    height: 300px; /* fixed height or adjust as needed */
-    background-position: center top;
-    background-size: cover;
     position: relative;
-  }
-
-  /* Hide the hero-box's absolute positioning on mobile */
-  .hero-box {
-    position: static !important;
-    margin: 0 auto;
-    background-color: #000000cc; /* dark shadow bg */
-    color: white;
-    border-radius: 16px;
-    padding: 20px;
-    max-width: 90%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transform: translateY(0); /* reset transforms */
-    text-align: center;
-    margin-top: 1rem;
+    aspect-ratio: 3 / 4;
   }
 
   .hero-section .container {
-    display: block;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-section {
-    background: #000 url("../images/madeira.jpg") no-repeat center center;
-    background-size: cover;
-    height: 300px; /* adjust as needed */
-    position: relative;
+    display: none;
   }
 
-  .hero-section .container {
-    display: none; /* hide the .hero-box from inside hero-section */
-  }
-
-  /* Move hero-box visually below .hero-section */
   .mobile-hero-box {
     display: block;
     background: rgba(0, 0, 0, 0.6);
@@ -1368,9 +1306,7 @@ body {
     font-size: 16px;
     padding: 10px 30px;
   }
-}
 
-@media (max-width: 767px) {
   .mobile-hero-img {
     width: 100%;
     height: auto;
@@ -1387,15 +1323,19 @@ body {
     border-radius: 0;
   }
 
-    /* Optional: spacing above #wedding */
-    #wedding {
-      margin-top: 300px;
-    }
+  #wedding {
+    margin-top: 300px;
+  }
 }
 
-.phone-picture {
-  background: #000 url("../images/madeira.jpg") no-repeat center center;
+/* Optional: curve overlay stays visible */
+.curve-holder {
+  background: transparent url("../images/curve-mask.svg") no-repeat 50% bottom;
   background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  height: 300px; /* Adjust as needed */
+  height: 120px;
+  z-index: 10;
 }
