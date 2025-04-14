@@ -35,7 +35,7 @@
         <div class="row">
           <div class="hero-box col-lg-5 col-md-7 col-12">
             <h1 class="headline script">
-              <span class="names display-block">Kamilė ir Kęstutis</span>
+              <span style="margin-top: 50px;" class="names display-block">Kamilė ir Kęstutis</span>
               <span class="statement display-block">
                 <span class="swirl-left"></span><span class="statement-text">kviečia jus į savo vestuves</span><span
                   class="swirl-right"></span>
@@ -52,8 +52,8 @@
       <div class="curve-holder"></div>
     </div><!--//hero-section-->
 
-    <div class="mobile-hero-img d-md-none">
-      <img src="assets/images/IMG_2491asd.jpg" alt="Wedding banner" class="img-fluid rounded shadow">
+    <div class="mobile-hero-img phone-picture d-md-none">
+      
     </div>
 
     <div class="mobile-hero-box d-md-none">
